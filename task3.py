@@ -17,5 +17,3 @@ def self_dividing_numbers(left, right):
 
 
 print(self_dividing_numbers(left=int(input("Enter left: ")), right=int(input("Enter right: "))))
-
-

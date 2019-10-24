@@ -9,5 +9,3 @@ for i in range(n):
     lin.append(int(input("Enter l(1...n): ")))
 cnt = Counter(lin)
 print(cnt.most_common()[0][0])
-
-

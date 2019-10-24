@@ -14,4 +14,3 @@ for i in range(x + 1):
                 ar[p] = [i, j, k]
                 p += 1
 print(ar)
-
