@@ -63,7 +63,8 @@ def go():
             current = now.strftime("%a, %d %b %Y %H:%M:%S +03:00")
             txt = open("data.txt", "a+")
             txt.write("SNAPSHOT %d\r\nTIMESTAMP: %s\r\n" % ((i + 1), current))
-            txt.write("CPU load: %s\r\nOverall virtual memory used: %s\r\nOverall virtual memory free: %s\r\n" % (
+            txt.write("CPU load: %s\r\nOverall virtual memory used:\
+             %s\r\nOverall virtual memory free: %s\r\n" % (
                 str(a.cpu_load()) + " %",
                 str(a.virt_memory_used()),
                 str(a.virt_memory_free())))
@@ -77,4 +78,3 @@ def go():
 
 if __name__ == "__main__":
     go()
-
