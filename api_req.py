@@ -4,7 +4,6 @@ import requests
 import argparse
 import getpass
 
-user = "Gardej"
 passwd = getpass.getpass()
 
 # I have tested it with -user_name "alenaPy" and -repo "devops_lab".
@@ -21,11 +20,11 @@ parser.add_argument('-v', action="version", version="version 0.0.7")
 args = parser.parse_args()
 
 url = "https://api.github.com"
-basic_info = requests.get(url + '/user', auth=(user, passwd))
+basic_info = requests.get(url + '/user', auth=(args.user_name[0], passwd))
 pulls_info = requests.get(
-    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/pulls', auth=(user, passwd))
+    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/pulls', auth=(args.user_name[0], passwd))
 stats_info = requests.get(
-    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/forks', auth=(user, passwd))
+    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/forks', auth=(args.user_name[0], passwd))
 data1 = basic_info.json()
 data2 = pulls_info.json()
 data3 = stats_info.json()
