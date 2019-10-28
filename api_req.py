@@ -22,9 +22,11 @@ args = parser.parse_args()
 url = "https://api.github.com"
 basic_info = requests.get(url + '/user', auth=(args.user_name[0], passwd))
 pulls_info = requests.get(
-    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/pulls', auth=(args.user_name[0], passwd))
+    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/pulls',
+    auth=(args.user_name[0], passwd))
 stats_info = requests.get(
-    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/forks', auth=(args.user_name[0], passwd))
+    url + '/repos/' + args.user_name[0] + '/' + args.repo[0] + '/forks',
+    auth=(args.user_name[0], passwd))
 data1 = basic_info.json()
 data2 = pulls_info.json()
 data3 = stats_info.json()
