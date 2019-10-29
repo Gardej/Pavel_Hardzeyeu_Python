@@ -6,7 +6,6 @@ import getpass
 
 passwd = getpass.getpass()
 
-# I have tested it with -user_name "alenaPy" and -repo "devops_lab".
 parser = argparse.ArgumentParser()
 parser.add_argument('-user_name', nargs=1, help="write user name", required=True)
 parser.add_argument('-repo', nargs=1, help="write name of repo", required=True)
