@@ -1,7 +1,5 @@
-# Клавиатура. Задача 66.
+# Keyboard - task 5
 
 string = 'qwertyuiopasdfghjklzxcvbnmq'
-for i in string:
-    i = input()
-    print(string[string.index(i) + 1])
-    break
+i = input()
+print(string[string.index(i) + 1])
