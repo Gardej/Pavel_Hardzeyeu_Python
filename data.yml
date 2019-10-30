@@ -1,0 +1,13 @@
+apache_vhosts:
+- servername: www.tut.by
+  documentroot: /www/tut
+  serveradmin: www-admin@foo.example.com
+  directorypath: /usr/local/httpd/tut
+- servername: www.google.com
+  documentroot: /www/google
+  serveradmin: www-admin@foo.example.com
+  directorypath: /usr/local/httpd/google
+- servername: www.onliner.by
+  documentroot: /www/onliner
+  serveradmin: www-admin@foo.example.com
+  directorypath: /usr/local/httpd/onliner
